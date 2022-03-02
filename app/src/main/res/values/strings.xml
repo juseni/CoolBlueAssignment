@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CoolBlue Assignment</string>
+    <string name="hint_text_search">Enter the object or product you want to search</string>
+    <string name="search_button">Search</string>
+    <string name="welcome_app">Welcome to Coolblue</string>
+    <string name="available_for_delivering">Available for delivering tomorrow</string>
+    <string name="error_string">Error fetching or obtaining data</string>
+    <string name="back_button">Back!</string>
+</resources>

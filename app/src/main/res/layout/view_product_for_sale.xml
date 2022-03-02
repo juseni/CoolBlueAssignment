@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="@dimen/dimen_6dp"
+        app:cardElevation="@dimen/dimen_2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageView_product_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_4dp"
+                app:cardCornerRadius="@dimen/dimen_6dp"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView_product"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@color/teal_700" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView_productName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_6dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_product_container"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Apple iPhone X 256GB Zilver" />
+
+            <TextView
+                android:id="@+id/textView_productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_6dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintStart_toEndOf="@+id/imageView_product_container"
+                app:layout_constraintTop_toBottomOf="@+id/textView_productName"
+                tools:text="3000 USD" />
+
+            <TextView
+                android:id="@+id/textView_productAvialability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_6dp"
+                android:drawablePadding="@dimen/dimen_4dp"
+                android:text="@string/available_for_delivering"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12"
+                app:drawableEndCompat="@drawable/ic_indicator_delivery"
+                app:layout_constraintStart_toEndOf="@+id/imageView_product_container"
+                app:layout_constraintTop_toBottomOf="@+id/textView_productPrice"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

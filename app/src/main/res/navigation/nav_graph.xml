@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.coolblue.assignment.ui.fragments.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/actionProductsForSale"
+            app:destination="@id/navProductsForSaleFragment"
+            app:enterAnim="@animator/slide_up_in"
+            app:exitAnim="@animator/slide_up_out"
+            app:popEnterAnim="@animator/slide_up_back_in"
+            app:popExitAnim="@animator/slide_up_back_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navProductsForSaleFragment"
+        android:name="com.coolblue.assignment.ui.fragments.ObjectsForSaleFragment"
+        android:label="products_for_sale_fragment"
+        tools:layout="@layout/fragment_objects_for_sale">
+        <argument
+            android:name="query"
+            app:argType="string" />
+        <argument
+            android:name="page"
+            app:argType="integer" />
+    </fragment>
+</navigation>
