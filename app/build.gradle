@@ -80,6 +80,8 @@ dependencies {
     testImplementation testDependencies.mockitoKotlin
     androidTestImplementation testDependencies.junitAndroidX
     androidTestImplementation testDependencies.espresso
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
 }
 
 sourceCompatibility = "8"

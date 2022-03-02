@@ -2,12 +2,16 @@ package com.coolblue.assignment.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.coolblue.assignment.R
 import com.coolblue.assignment.databinding.ViewProductForSaleBinding
 import com.coolblue.assignment.utils.loadImageFromUrl
 import com.coolblue.domain.model.ProductForSale
 
+/**
+ * @author Juan Sebastian Niño
+ */
 class ProductsForSaleAdapter(
     private var onSelected: (Int) -> Unit,
     var data: List<ProductForSale> = emptyList()
@@ -19,15 +23,15 @@ class ProductsForSaleAdapter(
             val productForSale = getItem(position)
             binding.apply {
                 loadImageFromUrl(this.root.context, imageViewProduct, productForSale.productImage)
-                textViewProductPrice.text = productForSale.salesPriceIncVat.toString()
+                textViewProductPrice.text = productForSale.price.toString()
                 textViewProductName.text = productForSale.productName ?: ""
-               /* textViewProductAvialability.compoundDrawables[0].setTint(
+                textViewProductAvialability.compoundDrawables[2].setTint(
                     if (productForSale.availabilityState == 2 && productForSale.nextDayDelivery == true) {
-                        R.color.green
+                        ContextCompat.getColor(root.context, R.color.green)
                     } else {
-                        R.color.red
+                        ContextCompat.getColor(root.context, R.color.red)
                     }
-                )*/
+                )
                 root.setOnClickListener {
                     onSelected.invoke(productForSale.productId ?: 0)
                 }

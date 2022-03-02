@@ -5,6 +5,9 @@ import com.coolblue.assignment.ui.fragments.SearchFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
+/**
+ * @author Juan Sebastian Niño
+ */
 @Module
 abstract class FragmentBuildersModule {
 

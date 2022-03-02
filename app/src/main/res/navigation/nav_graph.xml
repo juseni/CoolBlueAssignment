@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.coolblue.assignment.ui.fragments.SearchFragment"
-        android:label="search_fragment"
+        android:label="@string/welcome_app"
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/actionProductsForSale"
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/navProductsForSaleFragment"
         android:name="com.coolblue.assignment.ui.fragments.ObjectsForSaleFragment"
-        android:label="products_for_sale_fragment"
+        android:label="@string/welcome_app"
         tools:layout="@layout/fragment_objects_for_sale">
         <argument
             android:name="query"

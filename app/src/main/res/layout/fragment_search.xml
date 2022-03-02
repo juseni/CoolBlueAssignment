@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/dimen_18dp"
-        app:cardBackgroundColor="@color/cardview_dark_background"
+        app:cardBackgroundColor="@color/teal_700"
         app:cardCornerRadius="@dimen/dimen_6dp"
         app:cardElevation="@dimen/dimen_2dp">
 
@@ -27,17 +27,18 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_text_search"
                 android:minHeight="48dp"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@android:color/black"
                 android:textColorHint="@color/cardview_light_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/button_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/search_button"
+                style="?attr/materialButtonStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

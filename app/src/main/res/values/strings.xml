@@ -6,4 +6,6 @@
     <string name="available_for_delivering">Available for delivering tomorrow</string>
     <string name="error_string">Error fetching or obtaining data</string>
     <string name="back_button">Back!</string>
+    <string name="label_price">Price:</string>
+    <string name="label_availability">Available to delivery tomorrow:</string>
 </resources>

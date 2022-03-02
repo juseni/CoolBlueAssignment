@@ -5,6 +5,9 @@ import com.coolblue.assignment.ui.activities.ObjectForSaleDetailActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
+/**
+ * @author Juan Sebastian Niño
+ */
 @Module
 abstract class ActivityBuildersModule {
 

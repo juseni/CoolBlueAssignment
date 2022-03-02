@@ -12,6 +12,9 @@ import io.reactivex.rxjava3.kotlin.addTo
 import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 
+/**
+ * @author Juan Sebastian Niño
+ */
 @ObjectsForSaleScope
 class ObjectsForSaleController @Inject constructor(
     private val useCase: CoolBlueRepository,
@@ -38,4 +41,8 @@ class ObjectsForSaleController @Inject constructor(
                 publishSubject.onNext(ObjectsForSaleState.OnErrorData)
             }).addTo(disposables)
     }
+
+    fun getProductsForSale() = repository.getProductsForSale()
+
+    fun getProductForSaleByProductId(productId: Int) = repository.getProductForSaleByProductId(productId)
 }

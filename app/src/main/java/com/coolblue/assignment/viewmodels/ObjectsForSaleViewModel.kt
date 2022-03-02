@@ -13,6 +13,9 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import javax.inject.Inject
 
+/**
+ * @author Juan Sebastian Niño
+ */
 class ObjectsForSaleViewModel @Inject constructor(
     private val controller: ObjectsForSaleController
 ): ViewModel(), LifecycleObserver {

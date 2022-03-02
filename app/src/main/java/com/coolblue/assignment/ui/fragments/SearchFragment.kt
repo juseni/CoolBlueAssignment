@@ -4,12 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.coolblue.assignment.R
 import com.coolblue.assignment.databinding.FragmentSearchBinding
 import dagger.android.support.DaggerFragment
 
+/**
+ * @author Juan Sebastian Niño
+ */
 class SearchFragment : DaggerFragment() {
 
     private var _binding: FragmentSearchBinding? = null

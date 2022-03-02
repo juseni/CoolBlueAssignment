@@ -10,6 +10,9 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
+/**
+ * @author Juan Sebastian Niño
+ */
 @Module
 class RepositoryModule {
 

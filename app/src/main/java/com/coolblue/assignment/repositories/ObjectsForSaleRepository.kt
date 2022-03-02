@@ -4,6 +4,9 @@ import com.coolblue.assignment.di.scopes.ObjectsForSaleScope
 import com.coolblue.domain.model.ProductForSale
 import javax.inject.Inject
 
+/**
+ * @author Juan Sebastian Niño
+ */
 @ObjectsForSaleScope
 class ObjectsForSaleRepository @Inject constructor() {
     companion object {
@@ -18,4 +21,8 @@ class ObjectsForSaleRepository @Inject constructor() {
     private fun clearData() {
         productsForSale = emptyList()
     }
+
+    fun getProductsForSale() = productsForSale
+
+    fun getProductForSaleByProductId(productId: Int) = productsForSale.firstOrNull { it.productId == productId }
 }

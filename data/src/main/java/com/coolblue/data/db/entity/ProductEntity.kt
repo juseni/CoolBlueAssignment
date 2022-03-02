@@ -11,14 +11,9 @@ data class ProductEntity(
     @SerializedName("productName") val productName: String? = null,
     @SerializedName("nextDayDelivery") val nextDayDelivery: Boolean? = null,
     @SerializedName("availabilityState") val availabilityState: Int? = null,
-    @SerializedName("salesPriceIncVat") val salesPriceIncVat: Double? = null
-
-   /* @SerializedName("reviewInformation")  val reviewInformation: ReviewData? = null,
-    @SerializedName("USPs") val specifications: Map<Int, String>? = null,
-    @SerializedName("availabilityState") val availabilityState: Int? = null,
     @SerializedName("salesPriceIncVat") val price: Double? = null,
-    @SerializedName("productImage") val productImage: String? = null,
-    */
+    @SerializedName("reviewInformation")  val reviewInformation: ReviewData? = null,
+    @SerializedName("USPs") val specifications: List<String>? = null
 )
 
 data class ReviewData(

@@ -10,8 +10,10 @@ import com.coolblue.domain.repositories.CoolBlueRepository
 import com.google.gson.Gson
 import io.reactivex.rxjava3.core.Single
 import java.lang.Exception
-import javax.inject.Inject
 
+/**
+ * @author Juan Sebastian Niño
+ */
 class CoolBlueRepositoryImpl(
     val gson: Gson,
     val api: CoolBlueApi,
@@ -21,9 +23,8 @@ class CoolBlueRepositoryImpl(
     override fun getObjectsForSale(query: String, page: Int): Single<Result<Products>> {
         return if (networkHandler.isConnected()) {
              api.getObjectsForSaleByQuery(query, page).flatMap { response ->
-                //api.getPrueba().flatMap { response ->
-                if (response.isSuccessful) {
-                    Single.just(Result.Success(gson.mapToObject(response.body()!!)))
+                if (response.isSuccessful && response.body() != null) {
+                    Single.just(Result.Success(gson.mapToObject(response.body())))
                 } else {
                     Single.just(Result.Error(Exception("Something wrong")))
                 }

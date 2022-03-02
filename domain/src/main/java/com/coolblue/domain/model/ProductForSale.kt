@@ -1,12 +1,17 @@
 package com.coolblue.domain.model
 
+import com.google.gson.annotations.SerializedName
+
+/**
+ * @author Juan Sebastian Niño
+ */
 data class ProductForSale(
     val productId: Int?,
     val productName: String?,
     val reviewInformation: ReviewData?,
-    val specifications: Map<Int, String>?,
+    @SerializedName("USPs") val specifications: List<String>?,
     val availabilityState: Int?,
-    val salesPriceIncVat: Double?,
+    @SerializedName("salesPriceIncVat") val price: Double?,
     val productImage: String?,
     val nextDayDelivery: Boolean?
 )

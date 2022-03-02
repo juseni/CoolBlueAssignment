@@ -11,6 +11,9 @@ import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
+/**
+ * @author Juan Sebastian Niño
+ */
 @Singleton
 @ObjectsForSaleScope
 @Component(

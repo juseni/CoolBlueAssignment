@@ -2,9 +2,11 @@ package com.coolblue.assignment.utils
 
 import android.content.Context
 import android.widget.ImageView
-import com.bumptech.glide.Glide
 import com.coolblue.assignment.R
 
+/**
+ * @author Juan Sebastian Niño
+ */
 fun loadImageFromUrl(
     context: Context,
     imageView: ImageView,

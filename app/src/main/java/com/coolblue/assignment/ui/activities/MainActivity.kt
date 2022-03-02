@@ -1,7 +1,6 @@
 package com.coolblue.assignment.ui.activities
 
 import android.os.Bundle
-import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -10,6 +9,9 @@ import com.coolblue.assignment.R
 import com.coolblue.assignment.databinding.ActivityMainBinding
 import dagger.android.support.DaggerAppCompatActivity
 
+/**
+ * @author Juan Sebastian Niño
+ */
 class MainActivity : DaggerAppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -19,6 +21,7 @@ class MainActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)

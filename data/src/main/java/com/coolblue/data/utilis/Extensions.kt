@@ -3,6 +3,9 @@ package com.coolblue.data.utilis
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
+/**
+ * @author Juan Sebastian Niño
+ */
 inline fun <reified T> Gson.mapToList(list: List<Any?>): T =
     fromJson(toJson(list), object : TypeToken<T>() {}.type)
 
